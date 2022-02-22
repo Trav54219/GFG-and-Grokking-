@@ -1,0 +1,137 @@
+#Here is a list of things I found online that someone should know before tackling Leetcode problems:
+#Array
+ex_array=[10,30,20,70,30,40,50]
+arr1=[1,2,3,4,5]
+arr3=[6,7,8,9,10]
+    #1.Insert an item
+ex_array.insert(1,50)
+print(ex_array)
+
+    #2.Remove an item
+ex_array.remove(70)
+print(ex_array)
+
+    #3.Update an item
+ex_array[2]=45
+print(ex_array)
+
+    #4.Find an item
+print(ex_array[0])
+    #5.Loop over array
+copyarr=[]
+for elem in ex_array:
+    copyarr.append(elem)
+print(copyarr)
+    #6.Copy an array
+arr2=ex_array
+print(arr2)
+    #7.Copy part of an array
+
+    #8.Sort an array
+ex_array.sort()
+print(ex_array)
+
+    #9.Reverse an array
+ex_array.reverse()
+print(ex_array)
+
+ex_array=ex_array[::-1]
+print(ex_array)
+    #10.Swap two items
+def swap_positions(arr1,arr3):
+    arr1[0],arr3[2]=arr3[4],arr1[4]
+    return arr1,arr3
+print(swap_positions(arr1,arr3))
+
+    #11. Filter an array
+
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Linked List (Know how to set up LinkedList Node Class)
+class Node:
+    def __init__(self,k):
+        self.key=k
+        self.next=None
+    #1. Insert a node
+    #2. Remove a node
+    #3. Update a node
+    #4. Find a node
+    #5. Loop over linked list
+    #6. Reverse a linked list
+    #7. Swap two nodes
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Stack and Queue
+    #1. Enqueue an item
+    #2. Dequeue an item
+    #3. Push an item to a stack
+    #4. Pop an item from a stack
+    #5. Loop over a stack or queue
+    #6. Peek at the top of a stack
+    #7. Reverse a stack
+    #8. Get size of stack or queue
+    #9. Construct a Stack 
+    #10. Construct  a Queue
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Hash Table
+    #1.Insert a key-value pair
+    #2. Find the value for a key
+    #3.Update the value for a key
+    #4.Check if a key has been used
+    #5.Loop over key-value pairs
+    #6.Delete a key-value pair
+    #7.Search for a value
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Graph
+    #1.Insert a node into a graph
+    #2.Remove a node from a graph
+    #3.Add an edge between two nodes
+    #4.Find the neighbors of a node
+    #5.Find a path between two nodes
+    #6. Construct a Graph 
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Heap
+    #1.Insert an item
+    #2.Pop the top item
+    #3.Peek the top item
+    #4.Remove an item
+    #5.Update an item
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Sorting
+    #1. Implement Quick Sort 
+    #2. Implement Bubble Sort 
+    #3. Implement Merge Sort 
+    #4.Implement Dijkstra's
+    #5. Implmenet Selction Sort 
+    #6. Implement Insertion Sort 
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Search 
+charr=[90,30,87,76,90,73,24]
+    #Implement a Binary Search(Interative) on an array 
+def binary_search(charr, x):
+    low = 0
+    high = len(charr) - 1
+    mid = 0
+    while low <= high:
+        mid = (high + low) // 2
+        if charr[mid] < x:
+            low = mid + 1
+        elif charr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
+print(binary_search(charr, 76))
+    #Implement a Binary Search(Recursive) on an array 
+    #Implement a DFS on a Tree
+    #Implement a BFS on a Tree
+    #Implement a DFS on a Graph 
+    #Implement a BFS on a Graph 
+    
+print("-----------------------------------------------------------------------------------------------------------------------------------")
+#Tree 
+    #Invert a Binary Tree
+    #Print Binary Tree(Pre Order Traversal)
+    #Print Binary Tree(In Order Traversal)
+    #Print Binary Tree(Post Order Traversal)
+
+#Trie
+    #Implement a Trie
