@@ -32,7 +32,7 @@ def findconsubarrays(array1,K):
 print(findconsubarrays(array1d, K))
 
 
-
+print("chicken")
 
 
 #Slidning Window approach 
