@@ -2,6 +2,7 @@
 #Dynamic Size
 #Allows different sizes
 print('___________________List (Dyanmic Sized Array) Introduction__________________')
+
 print('___________________List Item Access__________________')
 #Number inside are all indicies
 l = [10,20,30,40,50]
@@ -28,6 +29,7 @@ l.append(80) #This is the element
 print(l)
 l.insert(2,75)         #inserts 75 at index 2
 l.insert(4,90)         #inserts 90 at index 4
+l.insert(2,769)
 print(l)
 print(15 in l)
 print(90 in l)
@@ -93,7 +95,7 @@ def getevenodd(l):
             even.append(x)
         else:
             odd.append(x)
-    return even, odd
+    return [even, odd]
 l= [10,11,12,16]
 
 print(getevenodd(l))
@@ -109,9 +111,6 @@ def getsmaller(l,x):   #Get elements smaller than the target
             res.append(e)
     
     return res
-    
-
-
 print(getsmaller(l,x))
 
 print('_____________Slicing (List, Tuple, And String)________________')
@@ -153,6 +152,12 @@ print(listcomp)
 
 listcomp3 = [x for x in range(11) if x%2!=0]
 print(listcomp3)
+
+new_one14=[1,2,3,5,6,7,8,8,3,1,5,67,2,2]
+g=3
+
+print([elem for elem in new_one14 if elem>3])
+
 
 #which is the same as 
 l7=[]
@@ -273,9 +278,19 @@ def isSorted2(l):
         return False
 
 #print(isSorted2(new_list))
-print("--------------------------------------------------")
+print("-----------------Find Only the Odd numbers---------------------------------")
+#XOR solution 
+xo=[10,20,20,30,10]
+def findOdd(xo):
+    res=0
+    for elem in xo:
+        res=res^elem
+    return res
+print(findOdd(xo))
 
 
+
+print("-----------------Reversre a List in Python---------------------------------")
 #reverse a list in Python 
 l23=[10,20,30,40]
 rev_list=[10,20,30,40]
@@ -286,6 +301,7 @@ rev_list3= [10,20,30,40]
 rev_list.reverse()
 print(rev_list)
 
+print(reversed(rev_list))
 #method 2
 new_revl2 = rev_list2[::-1]
 print(new_revl2)
@@ -307,16 +323,14 @@ def reverse_list(l23):
 (reverse_list(l23))
 
 print(l23)
-
+print("-----------------Rotate by One ---------------------------------")
 
 #rotate list by 1 
- 
+
 rotate_list= [10,20,30,40]
 
 #using list slicing
 x = rotate_list[1:] + rotate_list[0:1]
-
-
 print(x)
 
 #using pop  and append method 
@@ -326,7 +340,13 @@ rotate_list2.append(rotate_list2.pop(0))
 print(rotate_list2)
 
 rotate_list3=[10,20,30,40]
-    
+
+#def own(rotate_list3):
+ #   first=rotate_list3[0]
+ #   for i in range(1, len(rotate_list3)):
+ #       rotate_list3[i-1]=rotate_list3[i]
+  #  rotate_list3[len(rotate_list3)i-1]=first
+
 
 
 #rotate by d places 

@@ -61,3 +61,18 @@ print(slidingwindow(array, K))
             #Window_sum increment Arr[Window_end]
             #Window Sum decrement arr[Window_start] (Subrtract the element going out)
             #Window Start increment by 1 (Slide the window ahead)
+
+
+#My Understanding of the Algorithm
+
+#Function Definition (Arr,k(usually the size constraint))
+    #Initialize Result
+    #Initialize Start of the Window 
+    #Initialize the Window Computational Value (Usually Zero)
+    #For loop which is gonna be the length of the array (Iterator Signifying the Window End)
+        #Sum gets updated as the window goes frome left to right
+        #Condition to properaly size the window 
+            #Subtract the element going out
+            #move the window Foward
+            #Computation based on teh condition of problem 
+

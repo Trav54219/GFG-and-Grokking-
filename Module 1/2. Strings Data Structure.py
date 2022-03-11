@@ -284,3 +284,18 @@ def anagramcheck(anacheck1,anacheck2):
 #Go over a more efficient solution and rewrite the code
 
 
+def findana(anacheck1,anacheck2):
+    if len(anacheck1)!=len(anacheck2):
+        return False
+    count=[0]*256
+    for i in range(1, len(anacheck1)):
+        count[ord(anacheck1[i])]+=1
+        count[ord(anacheck2[i])]-=1
+
+    for x in count:
+        if x!=0:
+            return False
+    return True
+
+print(findana(anacheck1,anacheck2))
+    

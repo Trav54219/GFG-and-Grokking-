@@ -34,8 +34,8 @@ print("_________________Analysis of Algorithms Background___________________")
 #Sum of first n natural numbers
 #We mainly measure order of growth in 
 
-def fun1(n):
-    return n * (n+1)/2
+def fun1(n): #O(1)
+    return n * (n+1)/2       #Math way to get the sum of first n natural numbers
 
 print(fun1(5))
 
@@ -45,22 +45,42 @@ def fun2(n): #O(n)
         count=count+i
     return count
 
-
-
 print(fun2(5))
 
 
 def fun3(n):     #O(n^2)
-    sum=0
+    count=0
     for i in range(1,n+1):
         for j in range(1,i+1):
-            sum=sum+1
+            count=count+1
     return sum
 
 print(fun3(5))
 
 #The main Idea of an algorithm is to measure order or growth of the inpit size
 
+print("_________________Best Average and Worst Case___________________")
+l=[1,2,3,4,7,9]
+def getSum(l): #O(n) Time 
+    sum=0
+    for x in l:
+        sum+=x
+    return sum 
+
+print(getSum(l))
+
+
+def getSumOdd(l): #Best Case Time: O(1)
+    if len(l)%2==0: #Average Case Time: O(n)
+        return 0    #Worst Case Time: O(n)
+    sum=0
+    for x in l:
+        sum+=x
+    return sum 
+
+print(getSumOdd(l))
+
+#Big O represents an upper bound of an algorithm you always represent algorithsm in worst case time complexity in an interview 
 print("_________________Analysis of Common Loops___________________")
 n=5
 c=10
@@ -142,6 +162,8 @@ def fun2(n): #O(1) Time complexity
 #Divide every recurion into two parts: 1. Recursive part and Non Recursive Part d\
 
 print("_________________Space Complexity___________________")
+
+#Space Complecity is dependednt on input size
 def getSum1(n):  #O(1) Space Complexity 
     return n*(n+1)/2
 
